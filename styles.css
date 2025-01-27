@@ -1,0 +1,652 @@
+body {
+    background-color: rgb(25, 25, 25);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(35, 35, 35);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: top 0.3s;
+}
+
+header.navbar .logo {
+    width: 60px;
+    height: auto;
+}
+
+header.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+header.navbar nav .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header.navbar nav .nav-links li {
+    margin: 0;
+    font-size: 14px;
+}
+
+header.navbar nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 20px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 60px;
+    background: url('Img/IMG_6358.JPG') no-repeat center center/cover;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    pointer-events: none;
+}
+
+.header .text {
+    position: relative;
+    color: white;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-left: 4rem;
+    z-index: 1;
+}
+
+.header .text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.header .underline {
+    width: 60%;
+    height: 5px;
+    background-color: rgb(255, 132, 0);
+    margin-top: 10px;
+}
+
+.logo-site {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
+
+section {
+    padding: 60px 20px;
+    color: white;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.sobre-nos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px 20px;
+    background-color: rgb(25, 25, 25);
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.sobre-nos::before {
+    content: '';
+    background: url('Img/IMG_2202.JPEG') no-repeat center center/cover;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-nos .text {
+    width: 40%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 5%;
+}
+
+.sobre-nos .text h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: rgb(255, 132, 0);
+}
+
+.sobre-nos .text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.maestro-educador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px 20px;
+    background-color: rgb(25, 25, 25);
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.maestro-educador::before {
+    content: '';
+    background: url('Img/IMG_1281.JPG') no-repeat center center/cover;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    order: 2;
+}
+
+.maestro-educador .text {
+    width: 40%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 5%;
+}
+
+.maestro-educador .text h2 {
+    color: rgb(255, 132, 0);
+    font-size: 3em;
+}
+
+.maestro-educador .text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.maestro-educador .subtitle {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: white;
+}
+
+
+/* Seção "Nossas Atuações" */
+
+.nossas-atuacoes {
+    background-color: black;
+}
+.nossas-atuacoes h2 {
+    margin-bottom: 5rem;
+    color: rgb(255, 132, 0);
+    text-align: center; 
+    font-size: 3em;
+}
+
+.nossas-atuacoes .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nossas-atuacoes .gallery-item {
+    width: 26%;
+    cursor: pointer;
+}
+
+.nossas-atuacoes .gallery-item img {
+    width: 80%;
+    height: 200px; /* Altura fixa para todas as miniaturas */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.nossas-atuacoes .gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-content {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 400px; /* Define um tamanho máximo para a imagem */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.modal-text {
+    margin-left: 20px;
+    color: black;
+    width: 40%;
+}
+
+.modal-text h3 {
+    font-size: 1.5em;
+    color: rgb(255, 132, 0);
+}
+
+.modal-text p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Estilo do botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.close-btn:hover {
+    color: rgb(255, 132, 0);
+}
+
+.videos {
+    padding: 60px 20px;
+    color: white;
+    background-color: rgb(25, 25, 25);
+    text-align: center;
+}
+
+.videos h2 {
+    font-size: 3em;
+    color: rgb(255, 132, 0);
+    margin-bottom: 60px;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+}
+
+.video-item {
+    width: 45%;
+    height: 0;
+    padding-bottom: 25%;
+    position: relative;
+}
+
+.video-item iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.contato {
+    background-color: rgb(25, 25, 25);
+    padding: 30px 20px; /* Menor espaçamento */
+    color: white;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.contato h2 {
+    font-size: 3em; /* Tamanho da fonte */
+    margin-bottom: 20px;
+    color: rgb(255, 132, 0);
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-details-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.contact-details {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+    margin-left: 40px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column; /* Alinha os links verticalmente */
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.social-media a {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: rgb(255, 132, 0);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: white;
+    text-align: center;
+}
+
+/* Botão do WhatsApp fixo */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    header.navbar nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header.navbar nav .nav-links.active {
+        display: flex;
+    }
+
+    header.navbar nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    header.navbar nav .nav-links li a {
+        font-size: 1.2em;
+    }
+
+    .header {
+        flex-direction: column;
+        height: 100vh;
+        background: url('Img/IMG_6358.JPG') no-repeat center center/cover;
+    }
+
+    .header::after {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    .header .text {
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .header .text h1 {
+        font-size: 2.5em;
+    }
+
+    .header .underline {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .logo-site {
+        width: 80px;
+        margin-top: 10px;
+    }
+
+    .sobre-nos, .maestro-educador {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .sobre-nos::before {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        margin-bottom: 20px; /* Adiciona espaçamento inferior para evitar sobreposição */
+    }
+
+    .sobre-nos .text, .maestro-educador .text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .maestro-educador {
+        flex-direction: column-reverse;
+        margin-top: 60px;
+    }
+
+    .maestro-educador::before {
+        width: 70%;
+        height: 150px;
+        background-size: cover;
+        margin-bottom: 20px; /* Adiciona espaçamento inferior para evitar sobreposição */
+    }
+
+    .maestro-educador .text, .sobre-nos .text {
+        width: 100%;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .maestro-educador .text h2, .sobre-nos .text h2 {
+        font-size: 2.5em;
+    }
+
+    .maestro-educador .text p, .sobre-nos .text p {
+        font-size: 1em;
+    }
+
+    .maestro-educador .subtitle {
+        font-size: 1.2em;
+    }
+
+    /* Ajuste para as miniaturas */
+    .nossas-atuacoes .gallery-item {
+        width: 45%; /* Ajusta a largura para duas colunas */
+    }
+
+    .nossas-atuacoes .gallery-item img {
+        width: 100%; /* Ajusta a largura da imagem para ocupar o espaço da coluna */
+        height: 150px; /* Ajusta a altura para caber melhor na tela */
+        margin-bottom: 20px; /* Espaçamento entre as imagens */
+    }
+
+    /* Modal */
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-image {
+        max-width: 100%;
+    }
+
+    .modal-text {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .close-btn {
+        top: 5px;
+        right: 5px;
+    }
+
+    .video-item {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
+        margin-bottom: 20px; /* Espaçamento entre os vídeos */
+    }
+
+    .video-item iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo-container {
+        justify-content: center;
+    }
+
+    .footer-details-container {
+        align-items: center;
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    .social-media {
+        align-items: center; /* Centraliza os links das redes sociais em telas menores */
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+        margin-left: 1px;
+    }
+}
+
