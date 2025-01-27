@@ -245,7 +245,7 @@ section h2 {
 
 .nossas-atuacoes .gallery-item img {
     width: 80%;
-    height: 200px; /* Altura fixa para todas as miniaturas */
+    height: 200px !important; /* Altura fixa para todas as miniaturas */
     object-fit: cover; /* Mantém a proporção da imagem */
     border-radius: 10px;
     transition: transform 0.3s ease;
