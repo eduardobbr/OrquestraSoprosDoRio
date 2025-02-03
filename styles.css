@@ -122,11 +122,12 @@ section h2 {
     margin-bottom: 20px;
 }
 
+/* Seção Sobre Nós */
 .sobre-nos {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
     padding: 60px 20px;
     background-color: rgb(25, 25, 25);
     width: 100%;
@@ -147,13 +148,8 @@ section h2 {
 .sobre-nos .text {
     width: 40%;
     color: white;
+    padding: 40px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-right: 5%;
 }
 
 .sobre-nos .text h2 {
@@ -169,9 +165,9 @@ section h2 {
 
 .maestro-educador {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
     padding: 60px 20px;
     background-color: rgb(25, 25, 25);
     width: 100%;
@@ -187,19 +183,13 @@ section h2 {
     border-radius: 0;
     flex-shrink: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    order: 2;
 }
 
 .maestro-educador .text {
     width: 40%;
     color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
-    margin-right: 5%;
+    text-align: left;
 }
 
 .maestro-educador .text h2 {
@@ -540,7 +530,6 @@ section h2 {
         width: 100%;
         height: 200px;
         background-size: cover;
-        margin-bottom: 20px; /* Adiciona espaçamento inferior para evitar sobreposição */
     }
 
     .sobre-nos .text, .maestro-educador .text {
@@ -550,14 +539,13 @@ section h2 {
 
     .maestro-educador {
         flex-direction: column-reverse;
-        margin-top: 130px;
     }
 
     .maestro-educador::before {
-        width: 70%;
-        height: 150px;
+        width: 100%;
+        height: 200px;
         background-size: cover;
-        margin-bottom: 20px; /* Adiciona espaçamento inferior para evitar sobreposição */
+        margin-bottom: 20px;
     }
 
     .maestro-educador .text, .sobre-nos .text {
@@ -578,18 +566,16 @@ section h2 {
         font-size: 1.2em;
     }
 
-    /* Ajuste para as miniaturas */
     .nossas-atuacoes .gallery-item {
-        width: 45%; /* Ajusta a largura para duas colunas */
+        width: 45%;
     }
 
     .nossas-atuacoes .gallery-item img {
-        width: 100%; /* Ajusta a largura da imagem para ocupar o espaço da coluna */
-        height: 150px; /* Ajusta a altura para caber melhor na tela */
-        margin-bottom: 20px; /* Espaçamento entre as imagens */
+        width: 100%;
+        height: 150px;
+        margin-bottom: 20px;
     }
 
-    /* Modal */
     .modal-content {
         flex-direction: column;
         align-items: center;
@@ -613,8 +599,8 @@ section h2 {
     .video-item {
         width: 100%;
         height: 0;
-        padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
-        margin-bottom: 20px; /* Espaçamento entre os vídeos */
+        padding-bottom: 56.25%;
+        margin-bottom: 20px;
     }
 
     .video-item iframe {
@@ -641,7 +627,7 @@ section h2 {
     }
 
     .social-media {
-        align-items: center; /* Centraliza os links das redes sociais em telas menores */
+        align-items: center;
     }
 
     .footer-logo {
@@ -649,4 +635,3 @@ section h2 {
         margin-left: 1px;
     }
 }
-
