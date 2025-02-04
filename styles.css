@@ -131,15 +131,14 @@ section h2 {
     padding: 60px 20px;
     background-color: rgb(0, 0, 0);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
 }
 
-.sobre-nos::before {
-    content: '';
-    background: url('Img/IMG_2202.JPEG') no-repeat center center/cover;
+.sobre-nos img {
     width: 50%;
     height: 100%;
+    object-fit: cover;
     border-radius: 0;
     flex-shrink: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -171,15 +170,14 @@ section h2 {
     padding: 60px 20px;
     background-color: rgb(25, 25, 25);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
 }
 
-.maestro-educador::before {
-    content: '';
-    background: url('Img/IMG_1281.JPG') no-repeat center center/cover;
+.maestro-educador img {
     width: 50%;
     height: 100%;
+    object-fit: cover;
     border-radius: 0;
     flex-shrink: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -189,7 +187,8 @@ section h2 {
     width: 40%;
     color: white;
     padding: 20px;
-    text-align: left;
+    text-align: center;
+    margin-right: 40px;
 }
 
 .maestro-educador .text h2 {
@@ -208,12 +207,11 @@ section h2 {
     color: white;
 }
 
-
-/* Seção "Nossas Atuações" */
-
+/* Estilo da seção "Nossas Atuações" */
 .nossas-atuacoes {
     background-color: black;
 }
+
 .nossas-atuacoes h2 {
     margin-bottom: 5rem;
     color: rgb(255, 132, 0);
@@ -344,7 +342,6 @@ section h2 {
     border: none;
     border-radius: 10px;
 }
-
 
 .contato {
     background-color: rgb(0, 0, 0);
@@ -493,6 +490,12 @@ section h2 {
     }
 
     .header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     }
 
@@ -520,39 +523,27 @@ section h2 {
     }
 
     .sobre-nos, .maestro-educador {
+        display: flex;
         flex-direction: column;
         text-align: center;
         gap: 30px;
         padding: 20px;
     }
 
-    .sobre-nos::before {
+    .sobre-nos img, .maestro-educador img {
         width: 100%;
-        height: 200px;
-        background-size: cover;
+        height: auto;
+        margin-bottom: 20px;
     }
 
     .sobre-nos .text, .maestro-educador .text {
         width: 100%;
         padding: 10px;
+        margin-right: 0;
     }
 
     .maestro-educador {
         flex-direction: column-reverse;
-    }
-
-    .maestro-educador::before {
-        width: 100%;
-        height: 200px;
-        background-size: cover;
-        margin-bottom: 40px;
-    }
-
-    .maestro-educador .text, .sobre-nos .text {
-        width: 100%;
-        text-align: center;
-        margin-left: 10px;
-        margin-top: 20px;
     }
 
     .maestro-educador .text h2, .sobre-nos .text h2 {
@@ -578,6 +569,7 @@ section h2 {
     }
 
     .modal-content {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -593,6 +585,7 @@ section h2 {
     }
 
     .close-btn {
+        position: absolute;
         top: 5px;
         right: 5px;
     }
@@ -610,17 +603,22 @@ section h2 {
     }
 
     .contact-info {
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
     .footer-logo-container {
+        display: flex;
         justify-content: center;
     }
 
     .footer-details-container {
+        display: flex;
         align-items: center;
+        flex-direction: column;
+        text-align: center;
     }
 
     .contact-details {
@@ -628,7 +626,9 @@ section h2 {
     }
 
     .social-media {
+        display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     .footer-logo {
