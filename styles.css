@@ -517,6 +517,10 @@ section h2 {
         margin-bottom: 30px;
     }
 
+    .header .text h2 {
+        font-size: 1.2em; /* Ajuste o tamanho do subtítulo para telas menores */
+    }
+
     .logo-site {
         width: 80px;
         margin-top: 10px;

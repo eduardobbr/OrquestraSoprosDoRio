@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modal-title');
     const modalDescription = document.getElementById('modal-description');
     const closeBtn = document.querySelector('.close-btn');
+    const sobreNosSection = document.getElementById('sobre-nos'); // Obtém a seção Sobre Nós
     let lastScrollTop = 0;
 
     // Alterna a navegação no menu mobile
@@ -18,10 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const navbar = document.querySelector('header.navbar');
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > lastScrollTop) {
-            navbar.style.top = '-100px'; // Esconde a navbar ao rolar para baixo
+        // Verifica se estamos na seção "Sobre Nós" ou abaixo dela
+        if (scrollTop > sobreNosSection.offsetTop) {
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = '-100px'; // Esconde a navbar ao rolar para baixo
+            } else {
+                navbar.style.top = '0'; // Mostra a navbar ao rolar para cima
+            }
         } else {
-            navbar.style.top = '0'; // Mostra a navbar ao rolar para cima
+            navbar.style.top = '0'; // Mostra a navbar na seção de início
         }
 
         lastScrollTop = scrollTop;
